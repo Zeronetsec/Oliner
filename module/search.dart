@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'dart:io';
 import '../console/command_interface.dart';
 import '../utils/color.dart';
@@ -13,7 +15,7 @@ class Search implements Command {
 
         final keyword = args[1].trim().toLowerCase();
         var targetPath = "";
-        
+
         if (args.length >= 3) {
             targetPath = args[2].trim();
             NoTraversal(targetPath);
@@ -21,7 +23,7 @@ class Search implements Command {
 
         final baseSearchPath = '${Root}/data/user_data/${targetPath}';
         final targetDir = Directory(baseSearchPath);
-        
+
         final isPathWithExtension = targetPath.endsWith('.txtx');
         final targetFile = File(
             isPathWithExtension ?
@@ -133,18 +135,17 @@ class Search implements Command {
                     final msg = match.group(4) ?? '';
 
                     if (
-                        key.toLowerCase().contains(keyword) || 
-                        value.toLowerCase().contains(keyword) || 
+                        key.toLowerCase().contains(keyword) ||
+                        value.toLowerCase().contains(keyword) ||
                         msg.toLowerCase().contains(keyword)
                     ) {
-                        
                         if (!fileHeaderPrinted) {
                             print("${N}File: ${GG}${file.path.replaceAll('data/user_data/', '')}${N}");
                             fileHeaderPrinted = true;
                         }
-                        
+
                         final msgPart = msg.isNotEmpty ?
-                            " ${DG}(${CC}$msg${DG})" :
+                            " ${DG}(${CC}${msg}${DG})" :
                             "";
                         final valueColor = (type == 'link') ? GG : B;
 
@@ -157,3 +158,5 @@ class Search implements Command {
         return matchesCount;
     }
 }
+
+// Copyright (c) 2026 Zeronetsec

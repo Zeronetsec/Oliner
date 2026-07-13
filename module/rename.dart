@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'dart:io';
 import '../console/command_interface.dart';
 import '../utils/color.dart';
@@ -81,3 +83,5 @@ class Rename implements Command {
         exit(1);
     }
 }
+
+// Copyright (c) 2026 Zeronetsec

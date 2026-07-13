@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 export 'version.dart';
 export 'help.dart';
 export 'uwu.dart';
@@ -17,3 +19,5 @@ export 'open.dart';
 export 'copy.dart';
 export 'mvkey.dart';
 export 'cpkey.dart';
+
+// Copyright (c) 2026 Zeronetsec

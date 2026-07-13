@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'dart:io';
 
 class Path {
@@ -6,3 +8,5 @@ class Path {
         return Directory.current.path + '/' + path;
     }
 }
+
+// Copyright (c) 2026 Zeronetsec

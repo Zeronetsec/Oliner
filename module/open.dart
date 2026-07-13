@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'dart:io';
 import '../console/command_interface.dart';
 import '../utils/color.dart';
@@ -44,7 +46,7 @@ class Open implements Command {
             final parserRegex = RegExp(
                 r'^([^:]+):\s*(link|code)\(([^)]+)\)(?:\.msg\(([^)]+)\))?',
             );
-            
+
             String? foundValue;
             String? foundType;
 
@@ -148,3 +150,5 @@ class Open implements Command {
         Process.runSync('bash', ['-c', fullCmd]);
     }
 }
+
+// Copyright (c) 2026 Zeronetsec

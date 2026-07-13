@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'dart:io';
 import '../console/command_interface.dart';
 import '../utils/color.dart';
@@ -66,3 +68,5 @@ class Rmkey implements Command {
         }
     }
 }
+
+// Copyright (c) 2026 Zeronetsec

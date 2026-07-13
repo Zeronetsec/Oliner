@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'dart:io';
 import 'command_interface.dart';
 import '../module/exportmod.dart';
@@ -40,3 +42,5 @@ void Console(List<String> args) {
         InvalidOption(fargs);
     }
 }
+
+// Copyright (c) 2026 Zeronetsec

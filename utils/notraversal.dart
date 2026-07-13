@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'dart:io';
 import 'color.dart';
 
@@ -9,3 +11,5 @@ void NoTraversal(String inputPath) {
         exit(1);
     }
 }
+
+// Copyright (c) 2026 Zeronetsec

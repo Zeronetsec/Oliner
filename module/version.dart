@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'dart:io';
 import '../console/command_interface.dart';
 import '../utils/color.dart';
@@ -15,3 +17,5 @@ class Version implements Command {
         print("${N}Homepage: ${GG}${homepage}${N}");
     }
 }
+
+// Copyright (c) 2026 Zeronetsec

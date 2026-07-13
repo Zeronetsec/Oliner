@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'dart:io';
 import '../console/command_interface.dart';
 import '../utils/color.dart';
@@ -49,9 +51,9 @@ class Import implements Command {
             final result = Process.runSync(
                 'unzip',
                 [
-                    '-o', 
-                    zipFile.absolute.path, 
-                    '-d', 
+                    '-o',
+                    zipFile.absolute.path,
+                    '-d',
                     targetExtractPath,
                 ],
             );
@@ -69,3 +71,5 @@ class Import implements Command {
         }
     }
 }
+
+// Copyright (c) 2026 Zeronetsec

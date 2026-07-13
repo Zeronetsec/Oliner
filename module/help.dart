@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'dart:convert';
 import 'dart:io';
 import '../console/command_interface.dart';
@@ -64,7 +66,9 @@ class Help implements Command {
                         final content = fileEntity.readAsStringSync();
                         final Map<String, dynamic> jsonData = jsonDecode(content);
                         final hp = Helper.fromJson(jsonData);
-                        final formattedArgs = hp.args.isNotEmpty ? " ${hp.args}" : "";
+                        final formattedArgs = hp.args.isNotEmpty ?
+                            " ${hp.args}" :
+                            "";
 
                         print("    ${DG}* ${GG}${hp.command}${CC}${formattedArgs}${N}");
                         print("    ${DG}└── ${WW}${hp.description}${N}");
@@ -79,3 +83,5 @@ class Help implements Command {
         }
     }
 }
+
+// Copyright (c) 2026 Zeronetsec

@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'dart:io';
 import '../console/command_interface.dart';
 import '../utils/color.dart';
@@ -40,7 +42,7 @@ class Export implements Command {
 
         try {
             final result = Process.runSync(
-                'zip', 
+                'zip',
                 [
                     '-r',
                     '-q',
@@ -63,3 +65,5 @@ class Export implements Command {
         }
     }
 }
+
+// Copyright (c) 2026 Zeronetsec

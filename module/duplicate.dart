@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'dart:io';
 import '../console/command_interface.dart';
 import '../utils/color.dart';
@@ -40,7 +42,10 @@ class Duplicate implements Command {
 
         if (targetDir.existsSync()) {
             try {
-                final entities = targetDir.listSync(recursive: true);
+                final entities = targetDir.listSync(
+                    recursive: true,
+                );
+
                 for (var entity in entities) {
                     if (
                         entity is File &&
@@ -137,3 +142,5 @@ class Duplicate implements Command {
         } catch (_) {}
     }
 }
+
+// Copyright (c) 2026 Zeronetsec

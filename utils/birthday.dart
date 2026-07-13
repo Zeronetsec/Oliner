@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'color.dart';
 
 void Birthday() {
@@ -13,3 +15,5 @@ void Birthday() {
         print("");
     }
 }
+
+// Copyright (c) 2026 Zeronetsec

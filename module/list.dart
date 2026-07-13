@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'dart:io';
 import '../console/command_interface.dart';
 import '../utils/color.dart';
@@ -29,7 +31,7 @@ class ModList implements Command {
 
                     print("${N}${indent}${R}- ${B}${folderName} ${DG}(${CC}${stats['folders']} folder${DG}, ${CC}${stats['files']} file${DG})${N}");
                     _renderDirectory(entity, depth + 1);
-                } 
+                }
                 else if (
                     entity is File &&
                     entity.path.endsWith('.txtx')
@@ -106,3 +108,5 @@ class ModList implements Command {
         return {'links': links, 'codes': codes};
     }
 }
+
+// Copyright (c) 2026 Zeronetsec

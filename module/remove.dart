@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'dart:io';
 import '../console/command_interface.dart';
 import '../utils/color.dart';
@@ -28,7 +30,7 @@ class Remove implements Command {
                 targetDir.deleteSync(recursive: true);
                 print("${GG}[+] ${N}Successfully removed folder: ${GG}data/user_data/${inputPath}${N}");
                 return;
-            } 
+            }
 
             if (targetFile.existsSync()) {
                 targetFile.deleteSync();
@@ -44,3 +46,5 @@ class Remove implements Command {
         }
     }
 }
+
+// Copyright (c) 2026 Zeronetsec

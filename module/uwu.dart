@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'dart:io';
 import '../console/command_interface.dart';
 
@@ -39,3 +41,5 @@ class Uwu implements Command {
         print("");
     }
 }
+
+// Copyright (c) 2026 Zeronetsec

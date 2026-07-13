@@ -1,3 +1,5 @@
+// https://github.com/Zeronetsec/Oliner
+
 import 'dart:io';
 import '../console/command_interface.dart';
 import '../utils/color.dart';
@@ -24,7 +26,7 @@ class Copy implements Command {
         );
 
         if (!file.existsSync()) {
-            print("${R}[!] ${N}File ${GG}data/user_data/${targetPath} ${N}not found!");
+            print("${R}[!] ${N}File: ${GG}data/user_data/${targetPath} ${N}not found!");
             exit(1);
         }
 
@@ -99,7 +101,7 @@ class Copy implements Command {
                 Process.runSync(
                     'bash',
                     [
-                        '-c', 
+                        '-c',
                         "echo -n '${escapedValue}' | command termux-clipboard-set",
                     ],
                 );
@@ -107,7 +109,7 @@ class Copy implements Command {
                 Process.runSync(
                     'bash',
                     [
-                        '-c', 
+                        '-c',
                         "echo -n '${escapedValue}' | command xclip -selection clipboard",
                     ],
                 );
@@ -119,7 +121,7 @@ class Copy implements Command {
                 Process.runSync(
                     'bash',
                     [
-                        '-c', 
+                        '-c',
                         "echo -n '${escapedValue}' | command xsel --clipboard --input",
                     ],
                 );
@@ -157,3 +159,5 @@ class Copy implements Command {
         );
     }
 }
+
+// Copyright (c) 2026 Zeronetsec
