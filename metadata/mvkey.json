@@ -1,0 +1,5 @@
+{
+    "Command": "--mvkey",
+    "Args": "<file> <key> <destfile> [<newname>]",
+    "Description": "move a key entry to another file, optionally renaming it"
+}

@@ -1,0 +1,5 @@
+{
+    "Command": "--duplicate",
+    "Args": "[<file|folder>] [--autoremove]",
+    "Description": "scan for duplicate lines and optionally clean them up"
+}

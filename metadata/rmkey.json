@@ -1,0 +1,5 @@
+{
+    "Command": "--rmkey",
+    "Args": "<file> <key>",
+    "Description": "remove a specific key entry from a file"
+}

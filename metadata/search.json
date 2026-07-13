@@ -1,0 +1,5 @@
+{
+    "Command": "--search",
+    "Args": "<keyword> [<file|folder>]",
+    "Description": "search for a text match inside files or specific paths"
+}

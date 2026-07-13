@@ -1,0 +1,5 @@
+{
+    "Command": "--add",
+    "Args": "<file> [<value>]",
+    "Description": "add a new file or append code/link entries"
+}

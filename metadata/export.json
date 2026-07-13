@@ -1,0 +1,5 @@
+{
+    "Command": "--export",
+    "Args": "<folder> [--out <file.zip>]",
+    "Description": "archive a category folder into a zip file"
+}

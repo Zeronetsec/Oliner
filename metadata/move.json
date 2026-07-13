@@ -1,0 +1,5 @@
+{
+    "Command": "--move",
+    "Args": "<file|folder> <dest>",
+    "Description": "move a file or category folder to a new destination path"
+}

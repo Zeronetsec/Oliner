@@ -1,0 +1,5 @@
+{
+    "Command": "--rename",
+    "Args": "<file|folder> <newname>",
+    "Description": "rename a specific file or category folder"
+}

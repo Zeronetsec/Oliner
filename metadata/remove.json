@@ -1,0 +1,5 @@
+{
+    "Command": "--remove",
+    "Args": "<file|folder>",
+    "Description": "delete a specific file or category folder"
+}

@@ -1,0 +1,5 @@
+{
+    "Command": "--show",
+    "Args": "<file>",
+    "Description": "display the formatted content of a specific file"
+}

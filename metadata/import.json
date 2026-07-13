@@ -1,0 +1,5 @@
+{
+    "Command": "--import",
+    "Args": "<file.zip> [--outsave <savename>]",
+    "Description": "extract and import a zip archive into a new category"
+}

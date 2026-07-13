@@ -1,0 +1,5 @@
+{
+    "Command": "--mkdir",
+    "Args": "<folder>",
+    "Description": "create a new category folder"
+}

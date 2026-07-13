@@ -1,0 +1,5 @@
+{
+    "Command": "--copy",
+    "Args": "<file> <key> [--with <cmd {} [args...]>]",
+    "Description": "copy the value of a specific key inside a file to clipboard"
+}

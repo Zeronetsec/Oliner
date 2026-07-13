@@ -1,0 +1,5 @@
+{
+    "Command": "--open",
+    "Args": "<file> <key> [--with <cmd {} [args...]>]",
+    "Description": "open a link value using a custom system command"
+}
