@@ -8,11 +8,11 @@ Additionally, core structures, commands, and language configurations are highly 
 
 ## Vulnerability Warning
 - The `--with` option in `--open` and `--copy` allows **command injection** if processing **untrusted input**. </br>
-  Always double-check the contents of your `data/user_data/`` before running.
+  Always double-check the contents of your `data/user_data/` before running.
 
 - Despite the inclusion of `utils/notraversal.dart`, absolute security against path traversal or other exploits is not guaranteed.
 
-- This tool is in early development, highly unstable, and built **just for fun**.
+- This tool is in early development, highly unstable, and built **just for fun**. </br>
   If you cannot accept broken code or security risks, please do not use it.
 
 <!-- Copyright (c) 2026 Zeronetsec -->
