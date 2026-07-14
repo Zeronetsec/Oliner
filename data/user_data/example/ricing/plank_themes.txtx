@@ -1,0 +1,7 @@
+<Extract to: ~/.local/share/plank/themes/>
+
+tce_in_black_prime_line: link(https://www.gnome-look.org/p/1305874)
+tce_in_black_cool_line: link(https://www.gnome-look.org/p/2126384)
+tce_in_black_octo_line: link(https://www.gnome-look.org/p/2126380)
+
+plank: code(apt install -y plank).msg(for debian, ubuntu, kali, and other debian bassed distros)

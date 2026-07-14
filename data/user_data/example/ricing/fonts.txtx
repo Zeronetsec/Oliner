@@ -1,0 +1,4 @@
+<Extract to: ~/.local/share/fonts/>
+
+source_code_pro: link(https://github.com/ryanoasis/nerd-fonts/releases/latest/download/SourceCodePro.zip)
+noto_color_emoji: link(https://fonts.google.com/noto/specimen/Noto+Color+Emoji)

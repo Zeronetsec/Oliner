@@ -144,7 +144,7 @@ class Copy implements Command {
 
         for (var char in dangerousCharacters) {
             if (trimmedTemplate.contains(char)) {
-                print("${R}[!] Security Alert!");
+                print("${R}[!] ${N}Security Alert!");
                 print("${R}[!] ${N}Dangerous char: ${GG}${char} ${N}detected!");
                 exit(1);
             }

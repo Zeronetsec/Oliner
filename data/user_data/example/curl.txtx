@@ -1,0 +1,6 @@
+# this is comment
+
+<Public API>
+ipapi.co: code(curl -s https://ipapi.co/8.8.8.8/json/)
+api.hackertarget.com: code(curl -s "https://api.hackertarget.com/reverseiplookup/?q=8.8.8.8").msg(reverse api by api.hackertarget.com via curl)
+hostsearch: code(curl -s "https://api.hackertarget.com/hostsearch/?q=google.com")

@@ -1,0 +1,8 @@
+<Web vuln for testing>
+testphp: link(http://testphp.vulnweb.com/)
+testhtml5: link(http://testhtml5.vulnweb.com/)
+testasp: link(http://testasp.vulnweb.com/).msg(aspnet: http://testaspnet.vulnweb.com/)
+rest: link(http://rest.vulnweb.com/)
+testfire: link(http://demo.testfire.net)
+juice-shop: link(https://juice-shop.herokuapp.com/)
+broken_autentication: link(https://broken-authentication.demo.owasp.org/).msg(owasp)
