@@ -1,8 +1,8 @@
 <!-- https://github.com/Zeronetsec/Oliner -->
 
-[![version](https://img.shields.io/badge/Oliner-Version%200.1-blue.svg)]()
-[![os](https://img.shields.io/badge/Supported%20OS-Linux-blue.svg)]()
-[![license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+<img src="https://img.shields.io/badge/Oliner-Version%200.1-blue.svg?style=square&logo=dart&logoColor=green" />
+<img src="https://img.shields.io/badge/Supported%20OS-Linux-blue.svg?style=square&logo=linux" />
+<img src="https://img.shields.io/badge/License-MIT-blue.svg?style=square&logo=github" />
 
 # Oliner
 Oliner is a lightweight CLI utility to store, organize, and access one-liner codes and links.
