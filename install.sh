@@ -33,6 +33,7 @@ include : '(
     .install/prepdir
     .install/zinstall
     .install/zparser
+    .install/extern/forlocal
 )'
 
 __BACKUP__=false
@@ -44,6 +45,7 @@ while [[ ${#} -gt 0 ]]; do
     shift
 done
 
+install::extern::forlocal
 install::inpackages
 install::prepdir
 install::installer
