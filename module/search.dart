@@ -149,7 +149,7 @@ class Search implements Command {
                             "";
                         final valueColor = (type == 'link') ? GG : B;
 
-                        print("  ${DG}└── ${WW}line ${i + 1}: ${WW}match ${DG}-> ${WW}${key}: ${valueColor}${value}${msgPart}${N}");
+                        print("  ${DG}└── ${WW}line ${i + 1}: ${GG}match ${DG}-> ${WW}${key}: ${valueColor}${value}${msgPart}${N}");
                         matchesCount++;
                     }
                 }

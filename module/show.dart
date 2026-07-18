@@ -27,23 +27,23 @@ class Show implements Command {
 
         try {
             final lines = file.readAsLinesSync();
-            String? globalMessage;
+            List<String> globalMessages = []; 
             final globalRegex = RegExp(r'<(.*)>');
-
             for (var line in lines) {
                 final trimmed = line.trim();
                 final match = globalRegex.firstMatch(trimmed);
                 if (match != null) {
-                    globalMessage = match.group(1);
-                    break;
+                    final msg = match.group(1);
+                    if (msg != null && msg.isNotEmpty) {
+                        globalMessages.add(msg); 
+                    }
                 }
             }
 
-            if (
-                globalMessage != null &&
-                globalMessage.isNotEmpty
-            ) {
-                print("${DG}[${YY}${globalMessage}${DG}]${N}");
+            if (globalMessages.isNotEmpty) {
+                for (var message in globalMessages) {
+                    print("${DG}[${YY}${message}${DG}]${N}");
+                }
                 print("");
             }
 
