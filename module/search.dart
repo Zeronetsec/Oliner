@@ -140,7 +140,7 @@ class Search implements Command {
                         msg.toLowerCase().contains(keyword)
                     ) {
                         if (!fileHeaderPrinted) {
-                            print("${N}File: ${GG}${file.path.replaceAll('data/user_data/', '')}${N}");
+                            print("${N}File: ${GG}${file.path.replaceAll('${Root}/data/user_data/', '')}${N}");
                             fileHeaderPrinted = true;
                         }
 
