@@ -27,7 +27,7 @@ class Show implements Command {
 
         try {
             final lines = file.readAsLinesSync();
-            List<String> globalMessages = []; 
+            List<String> globalMessages = [];
             final globalRegex = RegExp(r'<(.*)>');
             for (var line in lines) {
                 final trimmed = line.trim();
@@ -35,7 +35,7 @@ class Show implements Command {
                 if (match != null) {
                     final msg = match.group(1);
                     if (msg != null && msg.isNotEmpty) {
-                        globalMessages.add(msg); 
+                        globalMessages.add(msg);
                     }
                 }
             }
