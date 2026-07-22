@@ -1,3 +1,4 @@
 .install/** linguist-vendored
 data/user_data/** linguist-vendored
 install.sh linguist-vendored
+uninstall.sh linguist-vendored
