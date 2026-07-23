@@ -35,10 +35,6 @@ function install::installer() {
     )
 
     install::getinstall \
-        "command chmod +x ${opt}/oliner/oliner" \
-        "Set permission for: ${GG}${opt}/oliner/oliner${N}"
-
-    install::getinstall \
         "
             command ln -sf \
                 ${opt}/oliner/oliner \
