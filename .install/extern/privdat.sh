@@ -6,4 +6,4 @@ function install::extern::privdat() {
             "${root}/.privdat" \
             "${root}/data/user_data"
     fi
-}
+}; readonly -f install::extern::privdat
