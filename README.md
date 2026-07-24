@@ -3,7 +3,9 @@
 <div align="center">
     <img src="https://img.shields.io/badge/Oliner-Version%200.1-blue?style=square&logo=dart&logoColor=green&v=1" />
     <img src="https://img.shields.io/badge/Supported%20OS-Linux-blue?style=square&logo=linux&v=1" />
-    <img src="https://img.shields.io/badge/License-MIT-blue?style=square&logo=github&v=1" />
+    <a href="LICENSE">
+        <img src="https://img.shields.io/badge/License-MIT-blue?style=square&logo=github&v=1" />
+    </a>
 </div>
 
 # Oliner
@@ -38,8 +40,5 @@ oliner --export myoneliner --out backup.zip
 oliner --import backup.zip
 ```
 And more commands.
-
-## License
-This project is licensed under the MIT License.
 
 <!-- Copyright (c) 2026 Zeronetsec -->
