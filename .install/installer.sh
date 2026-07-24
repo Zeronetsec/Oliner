@@ -31,7 +31,7 @@ function install::installer() {
                 exe oliner.dart \
                 -o oliner
             " \
-            "Building: ${GG}oliner${N}"
+            "Compiling: ${GG}oliner${N}"
     )
 
     install::getinstall \
