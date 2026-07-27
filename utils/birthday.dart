@@ -11,7 +11,7 @@ void Birthday() {
     final now = "${month}-${day}";
 
     if (now == birthDate) {
-        print("${R}› ${N}Happy birthday for ${GG}oliner ${N}🎉");
+        print("${R}› ${N}Happy birthday for ${GG}Oliner ${N}🎉");
         print("");
     }
 }
