@@ -1,44 +1,12 @@
 function install::installer() {
-    if [[ "${__BACKUP__}" == true && -d "${opt}/oliner" ]]; then
-        (
-            cd "${opt}"
-            install::getinstall \
-                "
-                    command zip -r \
-                        oliner_${bkdate}.bak.zip \
-                        oliner
-                " \
-                "Backup: ${GG}${opt}/oliner ${DG}-> ${GG}${opt}/oliner_${bkdate}.bak.zip${N}"
-            cd
-        )
-    fi
-
-    if [[ -d "${opt}/oliner" ]]; then
-        install::getinstall \
-            "command rm -rf ${opt}/oliner" \
-            "Removing old source..."
-    fi
-
-    install::getinstall \
-        "command mv ${root} ${opt}/oliner" \
-        "Moving: ${GG}${root} ${DG}-> ${GG}${opt}/oliner${N}"
-
     (
-        cd "${opt}/oliner"
+        cd "${opt}/${targetins}"
         install::getinstall \
             "
-                command dart compile \
-                exe oliner.dart \
-                -o oliner
+                command dart compile exe \
+                    ${targetins}.dart \
+                    -o ${targetins}
             " \
-            "Compiling: ${GG}oliner${N}"
+            "Compiling: ${GG}${targetins}${N}"
     )
-
-    install::getinstall \
-        "
-            command ln -sf \
-                ${opt}/oliner/oliner \
-                ${bin}/oliner
-        " \
-        "Symlink: ${GG}${opt}/oliner/oliner ${DG}-> ${GG}${bin}/oliner${N}"
 }; readonly -f install::installer

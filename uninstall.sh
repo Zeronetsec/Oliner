@@ -29,10 +29,12 @@ include : '(
     .install/getinstall
 )'
 
+HOME="${HOME}"
 __RMBK__=false
 
 while [[ ${#} -gt 0 ]]; do
     case "${1}" in
+        "--home="*) export HOME="${1#*=}" ;;
         "--remove-backup") export __RMBK__=true ;;
     esac
     shift
@@ -40,19 +42,19 @@ done
 
 if [[ "${__RMBK__}" == true ]]; then
     install::getinstall \
-        "command rm -f ${opt}/oliner_*.zip.bak" \
+        "command rm -f ${opt}/${targetins}_*.zip.bak" \
         "Removing all backup..."
 fi
 
 install::getinstall \
-    "command rm -rf ${opt}/oliner" \
-    "Removing: ${GG}${opt}/oliner${N}"
+    "command rm -rf ${opt}/${targetins}" \
+    "Removing: ${GG}${opt}/${targetins}${N}"
 
 install::getinstall \
-    "command rm -f ${bin}/oliner" \
-    "Removing: ${GG}${bin}/oliner${N}"
+    "command rm -f ${bin}/${targetins}" \
+    "Removing: ${GG}${bin}/${targetins}${N}"
 
-echo -e "${GG}[+] ${N}Oliner removed"
+echo -e "${GG}[+] ${N}${targetins^} removed!"
 
 trap - EXIT
 exit ${?}
