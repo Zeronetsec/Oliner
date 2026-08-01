@@ -34,7 +34,7 @@ For more detailed installation and uninstallation instructions, see [.docs/insta
 ## Usage Example
 ```bash
 oliner --add myoneliner/code "GitHub: code(https://github.com/Zeronetsec).msg(my github profile)"
-oliner --copy myoneliner/code GitHub --with 'xclip -selection {}'
+oliner --copy myoneliner/code GitHub --with 'xclip -selection clipboard <<< {}'
 oliner --search GitHub
 oliner --export myoneliner --out backup.zip
 oliner --import backup.zip
