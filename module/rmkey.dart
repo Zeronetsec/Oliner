@@ -26,7 +26,7 @@ class Rmkey implements Command {
         );
 
         if (!file.existsSync()) {
-            print("${R}[!] ${N}File ${GG}data/user_data/${targetPath} ${N}not found!");
+            print("${color_R}[!] ${color_N}File ${color_GG}data/user_data/${targetPath} ${color_N}not found!");
             exit(1);
         }
 
@@ -49,7 +49,7 @@ class Rmkey implements Command {
             }
 
             if (!isKeyFound) {
-                print("${R}[!] ${N}Key: ${GG}${keyToRemove} ${N}not found in this file!");
+                print("${color_R}[!] ${color_N}Key: ${color_GG}${keyToRemove} ${color_N}not found in this file!");
                 exit(1);
             }
 
@@ -60,10 +60,10 @@ class Rmkey implements Command {
                     updatedLines.join('\n') + '\n',
                 );
             }
-            print("${GG}[+] ${N}Successfully removed key: ${GG}${keyToRemove} ${N}from ${GG}data/user_data/${targetPath}${N}");
+            print("${color_GG}[+] ${color_N}Successfully removed key: ${color_GG}${keyToRemove} ${color_N}from ${color_GG}data/user_data/${targetPath}${color_N}");
             return;
         } catch (e) {
-            print("${R}[!] ${N}Error modifying file: ${GG}${e}${N}");
+            print("${color_R}[!] ${color_N}Error modifying file: ${color_GG}${e}${color_N}");
             exit(1);
         }
     }

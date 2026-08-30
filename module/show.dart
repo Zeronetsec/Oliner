@@ -21,7 +21,7 @@ class Show implements Command {
         );
 
         if (!file.existsSync()) {
-            print("${R}[!] ${N}File: ${GG}data/user_data/${targetPath} ${N}not found!");
+            print("${color_R}[!] ${color_N}File: ${color_GG}data/user_data/${targetPath} ${color_N}not found!");
             exit(1);
         }
 
@@ -42,7 +42,7 @@ class Show implements Command {
 
             if (globalMessages.isNotEmpty) {
                 for (var message in globalMessages) {
-                    print("${DG}[${YY}${message}${DG}]${N}");
+                    print("${color_DG}[${color_YY}${message}${color_DG}]${color_N}");
                 }
                 print("");
             }
@@ -79,18 +79,18 @@ class Show implements Command {
                     final msg = match.group(4) ?? '';
 
                     final msgPart = msg.isNotEmpty ?
-                        " ${DG}(${CC}${msg}${DG})" :
+                        " ${color_DG}(${color_CC}${msg}${color_DG})" :
                         "";
 
                     if (type == 'link') {
-                        print("${N}${key}: ${GG}${value}${msgPart}${N}");
+                        print("${color_N}${key}: ${color_GG}${value}${msgPart}${color_N}");
                     } else if (type == 'code') {
-                        print("${N}${key}: ${B}${value}${msgPart}${N}");
+                        print("${color_N}${key}: ${color_B}${value}${msgPart}${color_N}");
                     }
                 }
             }
         } catch (e) {
-            print("${R}[!] ${N}Error parsing file: ${GG}${e}${N}");
+            print("${color_R}[!] ${color_N}Error parsing file: ${color_GG}${e}${color_N}");
             exit(1);
         }
     }

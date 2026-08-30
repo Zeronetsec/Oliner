@@ -21,7 +21,7 @@ class Export implements Command {
         final sourceDir = Directory(sourcePath);
 
         if (!sourceDir.existsSync()) {
-            print("${R}[!] ${N}Folder: ${GG}${sourcePath} ${N}does not exist!");
+            print("${color_R}[!] ${color_N}Folder: ${color_GG}${sourcePath} ${color_N}does not exist!");
             exit(1);
         }
 
@@ -38,7 +38,7 @@ class Export implements Command {
             outputPath = outputPath.replaceFirst('~', home);
         }
 
-        print("${B}[*] ${N}Archiving: ${GG}${sourcePath}${N}");
+        print("${color_B}[*] ${color_N}Archiving: ${color_GG}${sourcePath}${color_N}");
 
         try {
             final result = Process.runSync(
@@ -53,14 +53,14 @@ class Export implements Command {
             );
 
             if (result.exitCode == 0) {
-                print("${GG}[+] ${N}Successfully exported to: ${GG}${outputPath}${N}");
+                print("${color_GG}[+] ${color_N}Successfully exported to: ${color_GG}${outputPath}${color_N}");
                 return;
             } else {
-                print("${R}[!] ${N}Error: ${GG}${result.stderr}${N}");
+                print("${color_R}[!] ${color_N}Error: ${color_GG}${result.stderr}${color_N}");
                 exit(1);
             }
         } catch (e) {
-            print("${R}[!] ${N}Failed to execute zip command!");
+            print("${color_R}[!] ${color_N}Failed to execute zip command!");
             exit(1);
         }
     }

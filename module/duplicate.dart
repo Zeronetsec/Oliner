@@ -37,7 +37,7 @@ class Duplicate implements Command {
             '${baseSearchPath}.txtx',
         );
 
-        print("${B}[*] ${N}Scanning duplicates: ${GG}data/user_data/${targetPath} ${DG}(${WW}AutoRemove: ${GG}${autoRemove ? '${GG}true' : '${YY}false'}${DG})${N}");
+        print("${color_B}[*] ${color_N}Scanning duplicates: ${color_GG}data/user_data/${targetPath} ${color_DG}(${color_WW}AutoRemove: ${color_GG}${autoRemove ? '${color_GG}true' : '${color_YY}false'}${color_DG})${color_N}");
         print("");
 
         if (targetDir.existsSync()) {
@@ -55,13 +55,13 @@ class Duplicate implements Command {
                     }
                 }
             } catch (e) {
-                print("${R}[!] ${N}Error reading directory: ${GG}${e}${N}");
+                print("${color_R}[!] ${color_N}Error reading directory: ${color_GG}${e}${color_N}");
                 exit(1);
             }
         } else if (targetFile.existsSync()) {
             _processFile(targetFile, autoRemove);
         } else {
-            print("${R}[!] ${N}Path: ${GG}${targetPath} ${N}not found as file or folder!");
+            print("${color_R}[!] ${color_N}Path: ${color_GG}${targetPath} ${color_N}not found as file or folder!");
             exit(1);
         }
     }
@@ -105,7 +105,7 @@ class Duplicate implements Command {
                     if (seenData.contains(uniqueKey)) {
                         hasDuplicate = true;
                         duplicateReports.add(
-                            "  ${DG}└── ${WW}line ${i + 1}: ${GG}${trimmed}${N}",
+                            "  ${color_DG}└── ${color_WW}line ${i + 1}: ${color_GG}${trimmed}${color_N}",
                         );
                         if (autoRemove) continue;
                     } else {
@@ -120,7 +120,7 @@ class Duplicate implements Command {
                     '${Root}/data/user_data/', '',
                 );
 
-                print("${N}File: ${GG}${shortPath}${N}");
+                print("${color_N}File: ${color_GG}${shortPath}${color_N}");
                 print(duplicateReports.join('\n'));
 
                 if (autoRemove) {
@@ -132,11 +132,11 @@ class Duplicate implements Command {
                         );
                     }
                     print("");
-                    print("${GG}[+] ${N}Cleaned up.${N}");
+                    print("${color_GG}[+] ${color_N}Cleaned up.");
                     return;
                 } else {
                     print("");
-                    print("${YY}[!] ${N}Found duplicate!");
+                    print("${color_YY}[!] ${color_N}Found duplicate!");
                 }
             }
         } catch (_) {}

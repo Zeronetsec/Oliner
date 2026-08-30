@@ -26,7 +26,7 @@ class Copy implements Command {
         );
 
         if (!file.existsSync()) {
-            print("${R}[!] ${N}File: ${GG}data/user_data/${targetPath} ${N}not found!");
+            print("${color_R}[!] ${color_N}File: ${color_GG}data/user_data/${targetPath} ${color_N}not found!");
             exit(1);
         }
 
@@ -67,7 +67,7 @@ class Copy implements Command {
             }
 
             if (foundValue == null) {
-                print("${R}[!] ${N}Key: ${GG}${targetKey} ${N}not found in this file!");
+                print("${color_R}[!] ${color_N}Key: ${color_GG}${targetKey} ${color_N}not found in this file!");
                 exit(1);
             }
 
@@ -80,7 +80,7 @@ class Copy implements Command {
             }
 
         } catch (e) {
-            print("${R}[!] ${N}Error processing request: ${GG}${e}${N}");
+            print("${color_R}[!] ${color_N}Error processing request: ${color_GG}${e}${color_N}");
             exit(1);
         }
     }
@@ -114,7 +114,7 @@ class Copy implements Command {
                     ],
                 );
             }
-            print("${GG}[+] ${N}Value successfully copied to clipboard!${N}");
+            print("${color_GG}[+] ${color_N}Value successfully copied to clipboard!");
             return;
         } catch (_) {
             try {
@@ -125,10 +125,10 @@ class Copy implements Command {
                         "echo -n '${escapedValue}' | command xsel --clipboard --input",
                     ],
                 );
-                print("${GG}[+] ${N}Value successfully copied to clipboard!${N}");
+                print("${color_GG}[+] ${color_N}Value successfully copied to clipboard!");
                 return;
             } catch (err) {
-                print("${R}[!] ${N}Failed to access system clipboard!${N}");
+                print("${color_R}[!] ${color_N}Failed to access system clipboard!");
                 exit(1);
             }
         }
@@ -144,8 +144,8 @@ class Copy implements Command {
 
         for (var char in dangerousCharacters) {
             if (trimmedTemplate.contains(char)) {
-                print("${R}[!] ${N}Security Alert!");
-                print("${R}[!] ${N}Dangerous char: ${GG}${char} ${N}detected!");
+                print("${color_R}[!] ${color_N}Security Alert!");
+                print("${color_R}[!] ${color_N}Dangerous char: ${color_GG}${char} ${color_N}detected!");
                 exit(1);
             }
         }

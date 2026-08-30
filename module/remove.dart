@@ -28,20 +28,20 @@ class Remove implements Command {
         try {
             if (targetDir.existsSync()) {
                 targetDir.deleteSync(recursive: true);
-                print("${GG}[+] ${N}Successfully removed folder: ${GG}data/user_data/${inputPath}${N}");
+                print("${color_GG}[+] ${color_N}Successfully removed folder: ${color_GG}data/user_data/${inputPath}${color_N}");
                 return;
             }
 
             if (targetFile.existsSync()) {
                 targetFile.deleteSync();
-                print("${GG}[+] ${N}Successfully removed file: ${GG}${filePathString}${N}");
+                print("${color_GG}[+] ${color_N}Successfully removed file: ${color_GG}${filePathString}${color_N}");
                 return;
             }
 
-            print("${R}[!] ${N}Path: ${GG}data/user_data/${inputPath} ${N}not found as file or folder!");
+            print("${color_R}[!] ${color_N}Path: ${color_GG}data/user_data/${inputPath} ${color_N}not found as file or folder!");
             exit(1);
         } catch (e) {
-            print("${R}[!] ${N}Error deleting target: ${GG}${e}${N}");
+            print("${color_R}[!] ${color_N}Error deleting target: ${color_GG}${e}${color_N}");
             exit(1);
         }
     }

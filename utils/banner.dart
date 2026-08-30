@@ -8,14 +8,14 @@ void Banner() {
     try {
         final file = File('${Root}/data/banner.txt');
         if (!file.existsSync()) {
-            print("${R}[!] ${N}Error loading banner!");
+            print("${color_R}[!] ${color_N}Error loading banner!");
             exit(1);
         }
 
         final data = file.readAsStringSync();
-        print("${B}${data}${N}");
+        print("${color_B}${data}${color_N}");
     } catch (_) {
-        print("${R}[!] ${N}Error loading banner!");
+        print("${color_R}[!] ${color_N}Error loading banner!");
         exit(1);
     }
 }

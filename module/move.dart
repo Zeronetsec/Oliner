@@ -29,7 +29,7 @@ class Move implements Command {
 
         if (sourceDir.existsSync()) {
             if (destDir.existsSync()) {
-                print("${R}[!] ${N}Destination folder: ${GG}data/user_data/${destInput} ${N}already exists!");
+                print("${color_R}[!] ${color_N}Destination folder: ${color_GG}data/user_data/${destInput} ${color_N}already exists!");
                 exit(1);
             }
             try {
@@ -39,10 +39,10 @@ class Move implements Command {
                 }
 
                 sourceDir.renameSync(destDir.path);
-                print("${GG}[+] ${N}Successfully moved folder to: ${GG}data/user_data/${destInput}${N}");
+                print("${color_GG}[+] ${color_N}Successfully moved folder to: ${color_GG}data/user_data/${destInput}${color_N}");
                 return;
             } catch (e) {
-                print("${R}[!] ${N}Error moving folder: ${GG}${e}${N}");
+                print("${color_R}[!] ${color_N}Error moving folder: ${color_GG}${e}${color_N}");
                 exit(1);
             }
         }
@@ -65,7 +65,7 @@ class Move implements Command {
 
         if (sourceFile.existsSync()) {
             if (destFile.existsSync()) {
-                print("${R}[!] ${N}Destination file: ${GG}data/user_data/${destFilePath} ${N}already exists!");
+                print("${color_R}[!] ${color_N}Destination file: ${color_GG}data/user_data/${destFilePath} ${color_N}already exists!");
                 exit(1);
             }
             try {
@@ -75,15 +75,15 @@ class Move implements Command {
                 }
 
                 sourceFile.renameSync(destFile.path);
-                print("${GG}[+] ${N}Successfully moved file to: ${GG}data/user_data/${destFilePath}${N}");
+                print("${color_GG}[+] ${color_N}Successfully moved file to: ${color_GG}data/user_data/${destFilePath}${color_N}");
                 return;
             } catch (e) {
-                print("${R}[!] ${N}Error moving file: ${GG}${e}${N}");
+                print("${color_R}[!] ${color_N}Error moving file: ${color_GG}${e}${color_N}");
                 exit(1);
             }
             return;
         }
-        print("${R}[!] ${N}Source path: ${GG}${sourceInput} ${N}not found as file or folder!");
+        print("${color_R}[!] ${color_N}Source path: ${color_GG}${sourceInput} ${color_N}not found as file or folder!");
         exit(1);
     }
 }

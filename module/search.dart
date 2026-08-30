@@ -31,7 +31,7 @@ class Search implements Command {
             '${baseSearchPath}.txtx',
         );
 
-        print("${B}[*] ${N}Searching for: ${GG}${keyword} ${N}in ${GG}data/user_data/${targetPath}${N}");
+        print("${color_B}[*] ${color_N}Searching for: ${color_GG}${keyword} ${color_N}in ${color_GG}data/user_data/${targetPath}${color_N}");
         print("");
 
         int totalMatches = 0;
@@ -52,7 +52,7 @@ class Search implements Command {
                     }
                 }
             } catch (e) {
-                print("${R}[!] ${N}Error reading directory: ${GG}${e}${N}");
+                print("${color_R}[!] ${color_N}Error reading directory: ${color_GG}${e}${color_N}");
                 exit(1);
             }
         } else if (targetFile.existsSync()) {
@@ -60,11 +60,11 @@ class Search implements Command {
                 targetFile, keyword,
             );
         } else {
-            print("${R}[!] ${N}Path: ${GG}${targetPath} ${N}not found as file or folder!");
+            print("${color_R}[!] ${color_N}Path: ${color_GG}${targetPath} ${color_N}not found as file or folder!");
             exit(1);
         }
         print("");
-        print("${B}[*] ${N}Total found: ${GG}${totalMatches}${N}");
+        print("${color_B}[*] ${color_N}Total found: ${color_GG}${totalMatches}${color_N}");
         return;
     }
 
@@ -108,10 +108,10 @@ class Search implements Command {
                         )
                     ) {
                         if (!fileHeaderPrinted) {
-                            print("${N}File: ${GG}${file.path.replaceAll('${Root}/data/user_data/', '')}${N}");
+                            print("${color_N}File: ${color_GG}${file.path.replaceAll('${Root}/data/user_data/', '')}${color_N}");
                             fileHeaderPrinted = true;
                         }
-                        print("  ${DG}└── ${WW}line ${i + 1}: ${WW}globalmsg match: ${YY}${currentGlobalMsg}${N}");
+                        print("  ${color_DG}└── ${color_WW}line ${i + 1}: ${color_WW}globalmsg match: ${color_YY}${currentGlobalMsg}${color_N}");
                         matchesCount++;
                     }
                     continue;
@@ -140,16 +140,16 @@ class Search implements Command {
                         msg.toLowerCase().contains(keyword)
                     ) {
                         if (!fileHeaderPrinted) {
-                            print("${N}File: ${GG}${file.path.replaceAll('${Root}/data/user_data/', '')}${N}");
+                            print("${color_N}File: ${color_GG}${file.path.replaceAll('${Root}/data/user_data/', '')}${color_N}");
                             fileHeaderPrinted = true;
                         }
 
                         final msgPart = msg.isNotEmpty ?
-                            " ${DG}(${CC}${msg}${DG})" :
+                            " ${color_DG}(${color_CC}${msg}${color_DG})" :
                             "";
-                        final valueColor = (type == 'link') ? GG : B;
+                        final valueColor = (type == 'link') ? color_GG : color_B;
 
-                        print("  ${DG}└── ${WW}line ${i + 1}: ${GG}match ${DG}-> ${WW}${key}: ${valueColor}${value}${msgPart}${N}");
+                        print("  ${color_DG}└── ${color_WW}line ${i + 1}: ${color_GG}match ${color_DG}-> ${color_WW}${key}: ${valueColor}${value}${msgPart}${color_N}");
                         matchesCount++;
                     }
                 }

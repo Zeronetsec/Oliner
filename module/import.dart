@@ -23,7 +23,7 @@ class Import implements Command {
 
         final zipFile = File(zipPath);
         if (!zipFile.existsSync()) {
-            print("${R}[!] ${N}Zip file: ${GG}${zipPath} ${N}not found!");
+            print("${color_R}[!] ${color_N}Zip file: ${color_GG}${zipPath} ${color_N}not found!");
             exit(1);
         }
 
@@ -45,7 +45,7 @@ class Import implements Command {
             baseDir.createSync(recursive: true);
         }
 
-        print("${B}[*] ${N}Extracting: ${GG}${zipPath}${N}");
+        print("${color_B}[*] ${color_N}Extracting: ${color_GG}${zipPath}${color_N}");
 
         try {
             final result = Process.runSync(
@@ -59,14 +59,14 @@ class Import implements Command {
             );
 
             if (result.exitCode == 0) {
-                print("${GG}[+] ${N}Successfully imported to: ${GG}${targetExtractPath}/${N}");
+                print("${color_GG}[+] ${color_N}Successfully imported to: ${color_GG}${targetExtractPath}/${color_N}");
                 return;
             } else {
-                print("${R}[!] ${N}Error: ${GG}${result.stderr}${N}");
+                print("${color_R}[!] ${color_N}Error: ${color_GG}${result.stderr}${color_N}");
                 exit(1);
             }
         } catch (e) {
-            print("${R}[!] ${N}Failed to execute unzip command!");
+            print("${color_R}[!] ${color_N}Failed to execute unzip command!");
             exit(1);
         }
     }

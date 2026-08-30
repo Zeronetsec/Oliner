@@ -7,6 +7,6 @@ function install::installer() {
                     ${targetins}.dart \
                     -o ${targetins}
             " \
-            "Compiling: ${GG}${targetins}${N}"
+            "Compiling: ${color_GG}${targetins}${color_N}"
     )
 }; readonly -f install::installer

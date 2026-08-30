@@ -26,7 +26,7 @@ class Open implements Command {
         );
 
         if (!file.existsSync()) {
-            print("${R}[!] ${N}File ${GG}data/user_data/${targetPath} ${N}not found!");
+            print("${color_R}[!] ${color_N}File ${color_GG}data/user_data/${targetPath} ${color_N}not found!");
             exit(1);
         }
 
@@ -79,17 +79,17 @@ class Open implements Command {
                 foundValue == null ||
                 foundType == null
             ) {
-                print("${R}[!] ${N}Key: ${GG}${targetKey} ${N}not found in this file!");
+                print("${color_R}[!] ${color_N}Key: ${color_GG}${targetKey} ${color_N}not found in this file!");
                 exit(1);
             }
 
             if (foundType == 'code') {
-                print("${R}[!] ${N}Access Denied!");
-                print("${R}[!] ${N}Cannot open type: ${B}code()${N}");
+                print("${color_R}[!] ${color_N}Access Denied!");
+                print("${color_R}[!] ${color_N}Cannot open type: ${color_B}code()${color_N}");
                 exit(1);
             }
 
-            print("${B}[*] ${N}Opening: ${GG}${foundValue}${N}");
+            print("${color_B}[*] ${color_N}Opening: ${color_GG}${foundValue}${color_N}");
 
             if (customCommand != null) {
                 _runCustomCommand(
@@ -99,7 +99,7 @@ class Open implements Command {
                 _runDefaultOpen(foundValue);
             }
         } catch (e) {
-            print("${R}[!] ${N}Error processing request: ${GG}${e}${N}");
+            print("${color_R}[!] ${color_N}Error processing request: ${color_GG}${e}${color_N}");
             exit(1);
         }
     }
@@ -121,7 +121,7 @@ class Open implements Command {
             try {
                 Process.runSync('xdg-open', [value]);
             } catch (err) {
-                print("${R}[!] ${N}Failed to open system default browser/opener!");
+                print("${color_R}[!] ${color_N}Failed to open system default browser/opener!");
                 exit(1);
             }
         }
@@ -137,8 +137,8 @@ class Open implements Command {
 
         for (var char in dangerousCharacters) {
             if (trimmedTemplate.contains(char)) {
-                print("${R}[!] ${N}Security Alert!");
-                print("${R}[!] ${N}Dangerous char: ${GG}${char} ${N}detected!");
+                print("${color_R}[!] ${color_N}Security Alert!");
+                print("${color_R}[!] ${color_N}Dangerous char: ${color_GG}${char} ${color_N}detected!");
                 exit(1);
             }
         }

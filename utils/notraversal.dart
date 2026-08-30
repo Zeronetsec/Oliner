@@ -6,8 +6,8 @@ import 'color.dart';
 void NoTraversal(String inputPath) {
     final trimmed = inputPath.trim();
     if (trimmed.contains('..')) {
-        print("${R}[!] ${N}Blocked: ${GG}${inputPath}${N}");
-        print("${R}[!] ${N}Security Alert: ${GG}path traversal attempt detected!${N}");
+        print("${color_R}[!] ${color_N}Blocked: ${color_GG}${inputPath}${color_N}");
+        print("${color_R}[!] ${color_N}Security Alert: ${color_GG}path traversal attempt detected!${color_N}");
         exit(1);
     }
 }

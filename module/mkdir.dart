@@ -21,16 +21,16 @@ class Mkdir implements Command {
         );
 
         if (directory.existsSync()) {
-            print("${R}[!] ${N}Folder: ${GG}data/user_data/${targetPath} ${N}already exists!");
+            print("${color_R}[!] ${color_N}Folder: ${color_GG}data/user_data/${targetPath} ${color_N}already exists!");
             exit(1);
         }
 
         try {
             directory.createSync(recursive: true);
-            print("${GG}[+] ${N}Successfully created folder: ${GG}data/user_data/${targetPath}${N}");
+            print("${color_GG}[+] ${color_N}Successfully created folder: ${color_GG}data/user_data/${targetPath}${color_N}");
             return;
         } catch (e) {
-            print("${R}[!] ${N}Error creating folder: ${GG}${e}${N}");
+            print("${color_R}[!] ${color_N}Error creating folder: ${color_GG}${e}${color_N}");
             exit(1);
         }
     }

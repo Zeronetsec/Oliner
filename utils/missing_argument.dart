@@ -4,8 +4,8 @@ import 'dart:io';
 import 'color.dart';
 
 void MissingArgument() {
-    print("${R}[!] ${N}Missing argument!");
-    print("${R}[!] ${N}Try: ${GG}oliner --help${N}");
+    print("${color_R}[!] ${color_N}Missing argument!");
+    print("${color_R}[!] ${color_N}Try: ${color_GG}oliner --help${color_N}");
     exit(1);
 }
 

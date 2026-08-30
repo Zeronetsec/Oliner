@@ -28,15 +28,15 @@ class Add implements Command {
         if (args.length >= 3) {
             dataToWrite = args[2];
         } else {
-            stdout.write("${N}Addline: ${GG}");
+            stdout.write("${color_N}Addline: ${color_GG}");
             final input = stdin.readLineSync();
 
             if (
                 input == null ||
                 input.trim().isEmpty
             ) {
-                print("${R}[!] ${N}Input cannot be empty!");
-                print("${R}[!] ${N}Canceled!");
+                print("${color_R}[!] ${color_N}Input cannot be empty!");
+                print("${color_R}[!] ${color_N}Canceled!");
                 exit(1);
             }
             dataToWrite = input.trim();
@@ -62,10 +62,10 @@ class Add implements Command {
                     mode: FileMode.append,
                 );
             }
-            print("${GG}[+] ${N}Successfully added to: ${GG}data/user_data/${targetPath}${N}");
+            print("${color_GG}[+] ${color_N}Successfully added to: ${color_GG}data/user_data/${targetPath}${color_N}");
             return;
         } catch (e) {
-            print("${R}[!] ${N}Error writing to file: ${GG}${e}${N}");
+            print("${color_R}[!] ${color_N}Error writing to file: ${color_GG}${e}${color_N}");
             exit(1);
         }
     }

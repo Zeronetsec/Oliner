@@ -12,7 +12,7 @@ class ModList implements Command {
         );
 
         if (!baseDir.existsSync()) {
-            print("${R}[!] ${N}Folder: ${GG}data/user_data ${N}not found!");
+            print("${color_R}[!] ${color_N}Folder: ${color_GG}data/user_data ${color_N}not found!");
             exit(1);
         }
         _renderDirectory(baseDir, 0);
@@ -29,7 +29,7 @@ class ModList implements Command {
                         entity.uri.pathSegments.length - 2
                     ];
 
-                    print("${N}${indent}${R}- ${B}${folderName} ${DG}(${CC}${stats['folders']} folder${DG}, ${CC}${stats['files']} file${DG})${N}");
+                    print("${color_N}${indent}${color_R}- ${color_B}${folderName} ${color_DG}(${color_CC}${stats['folders']} folder${color_DG}, ${color_CC}${stats['files']} file${color_DG})${color_N}");
                     _renderDirectory(entity, depth + 1);
                 }
                 else if (
@@ -42,22 +42,22 @@ class ModList implements Command {
 
                     final contentStats = _parseTxtxContent(entity);
 
-                    String infoText = "${YY}empty${N}";
+                    String infoText = "${color_YY}empty${color_N}";
                     if (
                         contentStats['links']! > 0 &&
                         contentStats['codes']! > 0
                     ) {
-                        infoText = "${CC}${contentStats['links']} link${DG}, ${CC}${contentStats['codes']} code${N}";
+                        infoText = "${color_CC}${contentStats['links']} link${color_DG}, ${color_CC}${contentStats['codes']} code${color_N}";
                     } else if (contentStats['links']! > 0) {
-                        infoText = "${CC}${contentStats['links']} link${N}";
+                        infoText = "${color_CC}${contentStats['links']} link${color_N}";
                     } else if (contentStats['codes']! > 0) {
-                        infoText = "${CC}${contentStats['codes']} code${N}";
+                        infoText = "${color_CC}${contentStats['codes']} code${color_N}";
                     }
-                    print("${indent}${R}› ${GG}${fileName} ${DG}(${infoText}${DG})${N}");
+                    print("${color_N}${indent}${color_R}› ${color_GG}${fileName} ${color_DG}(${infoText}${color_DG})${color_N}");
                 }
             }
         } catch (e) {
-            print("${R}[!] ${N}Failed reading folder: ${GG}${dir.path}${N}");
+            print("${color_R}[!] ${color_N}Failed reading folder: ${color_GG}${dir.path}${color_N}");
             exit(1);
         }
     }

@@ -11,10 +11,10 @@ class Version implements Command {
     static const String homepage = 'https://github.com/Zeronetsec/Oliner';
 
     @override void execute(List<String> args) {
-        print("${N}Name: ${GG}${name}");
-        print("${N}Version: ${GG}${version}${N}");
-        print("${N}Creator: ${GG}${creator}${N}");
-        print("${N}Homepage: ${GG}${homepage}${N}");
+        print("${color_N}Name: ${color_GG}${name}${color_N}");
+        print("${color_N}Version: ${color_GG}${version}${color_N}");
+        print("${color_N}Creator: ${color_GG}${creator}${color_N}");
+        print("${color_N}Homepage: ${color_GG}${homepage}${color_N}");
     }
 }
 

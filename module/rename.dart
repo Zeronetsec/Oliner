@@ -29,16 +29,16 @@ class Rename implements Command {
 
         if (oldDir.existsSync()) {
             if (newDir.existsSync()) {
-                print("${R}[!] ${N}Destination folder: ${GG}data/user_data/${newInput} ${N}already exists!");
+                print("${color_R}[!] ${color_N}Destination folder: ${color_GG}data/user_data/${newInput} ${color_N}already exists!");
                 exit(1);
             }
 
             try {
                 oldDir.renameSync(newDir.path);
-                print("${GG}[+] ${N}Successfully renamed folder to: ${GG}data/user_data/${newInput}${N}");
+                print("${color_GG}[+] ${color_N}Successfully renamed folder to: ${color_GG}data/user_data/${newInput}${color_N}");
                 return;
             } catch (e) {
-                print("${R}[!] ${N}Error renaming folder: ${GG}${e}${N}");
+                print("${color_R}[!] ${color_N}Error renaming folder: ${color_GG}${e}${color_N}");
                 exit(1);
             }
         }
@@ -61,7 +61,7 @@ class Rename implements Command {
 
         if (oldFile.existsSync()) {
             if (newFile.existsSync()) {
-                print("${R}[!] ${N}Destination file: ${GG}data/user_data/${newFilePath} ${N}already exists!");
+                print("${color_R}[!] ${color_N}Destination file: ${color_GG}data/user_data/${newFilePath} ${color_N}already exists!");
                 exit(1);
             }
 
@@ -71,15 +71,15 @@ class Rename implements Command {
                     parentDir.createSync(recursive: true);
                 }
                 oldFile.renameSync(newFile.path);
-                print("${GG}[+] ${N}Successfully renamed file to: ${GG}data/user_data/${newFilePath}${N}");
+                print("${color_GG}[+] ${color_N}Successfully renamed file to: ${color_GG}data/user_data/${newFilePath}${color_N}");
                 return;
             } catch (e) {
-                print("${R}[!] ${N}Error renaming file: ${GG}${e}${N}");
+                print("${color_R}[!] ${color_N}Error renaming file: ${color_GG}${e}${color_N}");
                 exit(1);
             }
             return;
         }
-        print("${R}[!] ${N}Source path: ${GG}${oldInput} ${N}not found as file or folder!");
+        print("${color_R}[!] ${color_N}Source path: ${color_GG}${oldInput} ${color_N}not found as file or folder!");
         exit(1);
     }
 }

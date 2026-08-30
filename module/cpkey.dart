@@ -39,7 +39,7 @@ class Cpkey implements Command {
         );
 
         if (!sourceFile.existsSync()) {
-            print("${R}[!] ${N}Source file: ${GG}data/user_data/${sourcePath} ${N}not found!");
+            print("${color_R}[!] ${color_N}Source file: ${color_GG}data/user_data/${sourcePath} ${color_N}not found!");
             exit(1);
         }
 
@@ -69,7 +69,7 @@ class Cpkey implements Command {
             }
 
             if (extractedLine == null) {
-                print("${R}[!] ${N}Key: ${GG}${keyToCopy} ${N}not found in ${GG}${sourcePath}${N}!");
+                print("${color_R}[!] ${color_N}Key: ${color_GG}${keyToCopy} ${color_N}not found in ${color_GG}${sourcePath}${color_N}!");
                 exit(1);
             }
 
@@ -103,10 +103,10 @@ class Cpkey implements Command {
             targetFile.writeAsStringSync(targetContent);
 
             final finalKeyName = newKey ?? keyToCopy;
-            print("${GG}[+] ${N}Successfully copied key: ${GG}${keyToCopy} ${N}from ${GG}${sourcePath} ${N}to ${GG}${targetPath} ${N}as ${GG}${finalKeyName}${N}");
+            print("${color_GG}[+] ${color_N}Successfully copied key: ${color_GG}${keyToCopy} ${color_N}from ${color_GG}${sourcePath} ${color_N}to ${color_GG}${targetPath} ${color_N}as ${color_GG}${finalKeyName}${color_N}");
             return;
         } catch (e) {
-            print("${R}[!] ${N}Error copying key data: ${GG}${e}${N}");
+            print("${color_R}[!] ${color_N}Error copying key data: ${color_GG}${e}${color_N}");
             exit(1);
         }
     }

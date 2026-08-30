@@ -41,14 +41,14 @@ class Help implements Command {
 
         final metadataDir = Directory('${Root}/metadata');
         if (!metadataDir.existsSync()) {
-            print("${R}[!] ${N}Error reading config!");
-            print("${R}[!] ${N}Directory: ${GG}metadata ${N}not found!");
+            print("${color_R}[!] ${color_N}Error reading config!");
+            print("${color_R}[!] ${color_N}Directory: ${color_GG}metadata ${color_N}not found!");
             exit(1);
         }
 
-        print("${N}Usage: ${GG}oliner ${CC}<option> [<args>]${N}");
+        print("${color_N}Usage: ${color_GG}oliner ${color_CC}<option> [<args>]${color_N}");
         print("");
-        print("${N}Available options:");
+        print("${color_N}Available options:");
 
         try {
             final files = metadataDir
@@ -70,15 +70,15 @@ class Help implements Command {
                             " ${hp.args}" :
                             "";
 
-                        print("    ${DG}* ${GG}${hp.command}${CC}${formattedArgs}${N}");
-                        print("    ${DG}└── ${WW}${hp.description}${N}");
+                        print("    ${color_DG}* ${color_GG}${hp.command}${color_CC}${formattedArgs}${color_N}");
+                        print("    ${color_DG}└── ${color_WW}${hp.description}${color_N}");
                     } catch (_) {
                         continue;
                     }
                 }
             }
         } catch (err) {
-            print("${R}[!] ${N}Error reading config: ${GG}${err}${N}");
+            print("${color_R}[!] ${color_N}Error reading config: ${color_GG}${err}${color_N}");
             exit(1);
         }
     }
